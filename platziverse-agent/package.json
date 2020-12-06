@@ -1,0 +1,23 @@
+{
+  "name": "platziverse-agent",
+  "version": "1.0.0",
+  "description": "A Simple IoT Plaform- Agent",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alejomontoya/platziverse.git"
+  },
+  "author": "Alejandro Pinto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alejomontoya/platziverse/issues"
+  },
+  "homepage": "https://github.com/alejomontoya/platziverse#readme",
+  "devDependencies": {
+    "standard": "^16.0.3"
+  }
+}
