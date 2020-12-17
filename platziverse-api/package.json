@@ -1,0 +1,35 @@
+{
+  "name": "platziverse-api",
+  "version": "1.0.0",
+  "description": "A Simple IoT Platform - API",
+  "main": "server.js",
+  "scripts": {
+    "test": "ava tests/* --verbose",
+    "start": "NODE_ENV=production node server.js",
+    "dev": "SET DEBUG=platziverse:* && nodemon server.js",
+    "lint": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alejomontoya/platziverse.git"
+  },
+  "author": "Alejandro Pinto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alejomontoya/platziverse/issues"
+  },
+  "homepage": "https://github.com/alejomontoya/platziverse#readme",
+  "devDependencies": {
+    "ava": "^3.14.0",
+    "nodemon": "^2.0.6",
+    "standard": "^16.0.3",
+    "supertest": "^6.0.1"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "debug": "^4.3.1",
+    "express": "^4.17.1",
+    "express-asyncify": "^1.0.1",
+    "platziverse-db": "file:../platziverse-db"
+  }
+}
