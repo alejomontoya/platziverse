@@ -31,11 +31,13 @@ api.get('/agents', auth(config.auth) , async (req, res, next) => {
   debug('A request has come to /agents')
 
   const { user } = req
-  let agents = []
-
+  
   if(!user || !user.username) {
     return next(new Error('Not authorized'))
   }
+
+  let agents = []
+
 
   try {
     if(user.admin) {
