@@ -6,6 +6,7 @@ const path = require('path')
 const express = require('express')
 const asyncify = require('express-asyncify')
 const socketio = require('socket.io')
+const { mqttHost } = require('./config')
 const chalk = require('chalk')
 const PlatziverseAgent = require('platziverse-agent')
 
@@ -16,7 +17,11 @@ const port = process.env.PORT || 8080
 const app = asyncify(express())
 const server = http.createServer(app)
 const io = socketio(server)
-const agent = new PlatziverseAgent()
+const agent = new PlatziverseAgent({
+  mqtt: {
+    host: mqttHost
+  }
+})
 
 app.use(express.static(path.join(__dirname, 'public')))
 app.use('/', proxy)
